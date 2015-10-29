@@ -458,7 +458,8 @@
                     android:layout_weight="0.50"
                     android:background="@drawable/bouton_menu"
                     android:textColor="#ffffff"
-                    android:maxWidth="75dp" />
+                    android:maxWidth="75dp"
+                    android:onClick="versConvertisseur" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -467,7 +468,8 @@
                     android:id="@+id/button2"
                     android:layout_weight="0.50"
                     android:background="@drawable/bouton_menu"
-                    android:textColor="#ffffff" />
+                    android:textColor="#ffffff"
+                    android:onClick="versTaxes" />
             </LinearLayout>
         </LinearLayout>
 

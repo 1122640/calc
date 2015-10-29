@@ -1,5 +1,6 @@
 package com.example.nicol.calc;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -95,11 +96,11 @@ public class MainActivityCalc extends AppCompatActivity {
         }
         else if(tableauEquation.get(1).contains("÷"))
         {
-            if(!(tableauEquation.get(1).contentEquals("0")))
+            if(!(tableauEquation.get(2).endsWith("0")))
             {
                 calc = Double.parseDouble(tableauEquation.get(0))/Double.parseDouble(tableauEquation.get(2));
             }
-            else calc = 0.0;
+            else throw new IllegalArgumentException("Ne peut pas diviser par 0");
         }
         else if(tableauEquation.get(0).contains("√"))
         {
@@ -313,6 +314,15 @@ public class MainActivityCalc extends AppCompatActivity {
 
     }
 
+    public void versConvertisseur(View v){
+        Intent intent = new Intent(this,MainActivityConvertisseur.class);
+        startActivity(intent);
+    }
+
+    public void versTaxes(View v){
+        Intent intent = new Intent(this,MainActivityTaxes.class);
+        startActivity(intent);
+    }
 
 
     @Override
